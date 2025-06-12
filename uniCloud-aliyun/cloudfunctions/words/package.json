@@ -1,0 +1,7 @@
+{
+  "name": "words",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

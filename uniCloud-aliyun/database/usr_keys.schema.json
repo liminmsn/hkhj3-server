@@ -1,0 +1,1 @@
+{"bsonType":"object","required":["deviceId","activeTime","key","keyType"],"permission":{"read":true,"create":true,"update":true,"delete":false},"properties":{"_id":{"description":"ID，系统自动生成"},"deviceId":{"bsonType":"string"},"key":{"bsonType":"string"},"keyType":{"bsonType":"int"},"activeTime":{"bsonType":"int"}}}
