@@ -1,0 +1,9 @@
+{
+  "name": "pay_query",
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

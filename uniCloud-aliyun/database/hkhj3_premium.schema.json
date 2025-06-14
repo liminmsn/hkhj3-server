@@ -1,0 +1,1 @@
+{"bsonType":"object","required":["device_id","premium_time"],"permission":{"read":true,"create":true,"update":true,"delete":false},"properties":{"_id":{"description":"ID，系统自动生成"},"device_id":{"bsonType":"string"},"premium_time":{"bsonType":"timestamp"}}}
