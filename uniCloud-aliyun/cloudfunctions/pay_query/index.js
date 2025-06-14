@@ -13,7 +13,24 @@ exports.main = async (event, context) => {
 	const query_type = body['query_type'];
 	if (query_type == '0') {
 		data = await premium_check(device_id, out_trade_no);
+	} else if (query_type == '1') {
+		const db = uniCloud.database().collection('hkhj3_premium');
+		const data_ = await db.where({
+			'device_id': device_id
+		}).get()
+		if (data_.affectedDocs == 1) {
+			data = {
+				code: 200,
+				message: "查询成功！",
+				data: data_['data'][0]
+			};
+		} else {
+			data = {
+				code: 500,
+				message: "没有查询到当前设备的订阅数据！"
+			};
+		}
 	}
-	
+
 	return data;
 };
