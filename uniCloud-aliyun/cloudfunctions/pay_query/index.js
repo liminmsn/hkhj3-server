@@ -9,7 +9,11 @@ exports.main = async (event, context) => {
 	const body = JSON.parse(event['body']);
 	const device_id = body['device_id'];
 	const out_trade_no = body['out_trade_no'];
-	const data = await premium_check(device_id, out_trade_no);
-
+	let data;
+	const query_type = body['query_type'];
+	if (query_type == '0') {
+		data = await premium_check(device_id, out_trade_no);
+	}
+	
 	return data;
 };
